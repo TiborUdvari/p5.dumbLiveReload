@@ -1,0 +1,6 @@
+contributors-docs/*
+.parcel-cache/*
+.cache/*
+*.map
+src/*
+.keep

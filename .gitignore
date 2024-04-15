@@ -1,5 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,vim,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,vim,visualstudiocode
+node_modules
+.cache/*
+.parcel-cache/*
+node_modules/*
+dist/*
 
 ### macOS ###
 # General

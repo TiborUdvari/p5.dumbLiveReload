@@ -2,9 +2,24 @@
   "name": "p5.dumblivereload",
   "version": "0.0.1",
   "description": "Live reload p5 sketches without reloading the whole page",
-  "main": "index.js",
+  "source": "src/index.js",
+  "p5dlr.min": "dist/p5dumbLiveReload.min.js",
+  "p5dlr": "dist/p5dumbLiveReload.js",
+  "targets": {
+    "p5dlr.min": {
+      "optimize": true,
+      "isLibrary": false,
+      "outputFormat": "global"
+    },
+    "p5dlr": {
+      "optimize": false,
+      "isLibrary": false,
+      "outputFormat": "global"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "parcel watch",
+    "build": "parcel build --no-source-maps"
   },
   "keywords": [
     "p5.js",
@@ -17,5 +32,13 @@
     "coding"
   ],
   "author": "Tibor Udvari",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiborUdvari/p5.dumbLiveReload.git"
+  },
+  "homepage": "https://github.com/TiborUdvari/p5.dumbLiveReload#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
 }
