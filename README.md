@@ -4,6 +4,17 @@ p5.dumbLiveReload is a dead simple way to live reload or live code p5.js sketche
 ## How to use
 Include the script after p5.js. Your sketch script should be loaded in the body.
 
+Example:
+```js
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.dumblivereload@0.0.1/dist/p5dumbLiveReload.js"></script> 
+</head>
+<body>
+    <script src="sketch.js"></script>
+</body>
+```
+
 ## Why did you make this?
 My primary use case is avoiding reloading entire sketches in [p5.xr](https://p5xr.org/#/) because the immersive session needs to be initiated with a user action. Each time I change, I have to click a button and reload the whole experience, which takes a bit on XR headsets. 
 
