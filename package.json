@@ -1,0 +1,21 @@
+{
+  "name": "p5.dumblivereload",
+  "version": "0.0.1",
+  "description": "Live reload p5 sketches without reloading the whole page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "p5.js",
+    "live",
+    "reload",
+    "dumb",
+    "live",
+    "reload",
+    "live",
+    "coding"
+  ],
+  "author": "Tibor Udvari",
+  "license": "ISC"
+}
