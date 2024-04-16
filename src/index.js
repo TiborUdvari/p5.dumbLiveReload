@@ -1,5 +1,3 @@
-console.log('dumb reload');
-
 let globalVarNames = [];
 let p5Loaded = false;
 
@@ -66,13 +64,38 @@ async function reloadSketch() {
   const globals = getGlobals();
   await loadSketch();
   restoreGlobals(globals);
-  console.log('dumb reload');
+  // console.log('dumb reload');
 }
 
-preventSketchLoading();
-populateGlobalVarNames();
 
-setInterval(() => {
-  reloadSketch();
-}, 200);
+if (window.location.origin === "https://preview.p5js.org"){
+  console.error("Dumb Live Reload does not work with the p5 editor for now");
+} else {
+  preventSketchLoading();
+  populateGlobalVarNames();
+}
 
+p5.prototype.dumbReloadInterval = 500;
+p5.prototype.dumbReloadIntervalId = undefined;
+
+p5.prototype.dumbReloadRunning = function() {
+  return this.dumbReloadIntervalId !== undefined;
+}
+
+p5.prototype.stopDumbReload = function() {
+  if (this.dumbReloadIntervalId === undefined) return;
+  console.log("Stopping dumb reload");
+  clearInterval(this.dumbReloadIntervalId);
+  this.dumbReloadIntervalId = undefined;
+}
+
+p5.prototype.startDumbReload = function(interval) {
+  this.stopDumbReload();
+  this.dumbReloadInterval = interval || this.dumbReloadInterval; 
+  console.log(`Starting dumb reload with interval of ${this.dumbReloadInterval}ms`);
+  this.dumbReloadIntervalId = setInterval(() => {
+    reloadSketch();
+  }, this.dumbReloadInterval);
+}
+
+// p5.prototype.registerMethod("afterSetup", p5.prototype.startDumbReload);
