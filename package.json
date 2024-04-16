@@ -1,6 +1,6 @@
 {
   "name": "p5.dumblivereload",
-  "version": "0.0.3-0",
+  "version": "0.0.3",
   "description": "Live reload p5 sketches without reloading the whole page",
   "source": "src/index.js",
   "p5dlr.min": "dist/p5dumbLiveReload.min.js",
