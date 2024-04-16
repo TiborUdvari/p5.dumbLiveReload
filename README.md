@@ -11,7 +11,7 @@ Example:
 ```js
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5.dumblivereload@0.0.2/dist/p5dumbLiveReload.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/p5.dumblivereload@0.0.2-0/dist/p5dumbLiveReload.js"></script> 
 </head>
 <body>
     <script src="sketch.js"></script>
